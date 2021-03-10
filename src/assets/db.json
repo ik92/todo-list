@@ -34,6 +34,31 @@
       "name": "Машина",
       "colorId": 7,
       "id": 7
+    },
+    {
+      "name": "gffgj",
+      "colorId": 5,
+      "id": 8
+    },
+    {
+      "name": "hgjghj",
+      "colorId": 1,
+      "id": 9
+    },
+    {
+      "name": "ghjhgjghj",
+      "colorId": 1,
+      "id": 11
+    },
+    {
+      "name": "gfgj",
+      "colorId": 5,
+      "id": 12
+    },
+    {
+      "name": "gngfn",
+      "colorId": 3,
+      "id": 13
     }
   ],
   "tasks": [
