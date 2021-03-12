@@ -16,8 +16,9 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 750px;
-  min-height: 530px;
+
+  width: calc(100vw - 30px);
+  height: calc(100vh - 100px);
   transform: translate(-50%, -50%);
   box-shadow: 1px 2px 20px #f3f3f3;
   border-right: 10px;
@@ -35,9 +36,8 @@ body {
   &__tasks {
     flex: 1;
     padding: 60px;
+    overflow: auto;
   }
-
- 
 }
 
 .button {
@@ -47,6 +47,7 @@ body {
   border: 0;
   padding: 10px 20px;
   cursor: pointer;
+  font-size: 14px;
 
   &:hover {
     background: darken(#4dd599, 6%);
@@ -54,6 +55,23 @@ body {
 
   &:active {
     background: darken(#4dd599, 10%);
+  }
+
+  &:disabled {
+    background: #d8d8d8;
+  }
+
+  &--grey {
+    background: #f4f6f8;
+    color: #444444;
+
+    &:hover {
+      background: darken($color: #f4f6f8, $amount: 3%);
+    }
+
+    &:active {
+      background: darken($color: #f4f6f8, $amount: 6%);
+    }
   }
 }
 
@@ -64,6 +82,7 @@ body {
   border-radius: 4px;
   padding: 8px 12px;
   width: 100%;
+  font-size: 14px;
 
   &:focus {
     border-color: #dbdbdb;

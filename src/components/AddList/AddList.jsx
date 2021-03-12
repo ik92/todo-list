@@ -40,16 +40,17 @@ function AddList({ colors, onAdd }) {
         colorId: selectedColor,
       })
       .then(({ data }) => {
-        const color = colors.filter((color) => color.id === selectedColor)[0]
-          .name;
+        const color = colors.filter((color) => color.id === selectedColor)[0];
         const listObj = {
           ...data,
-          color: {
-            name: color,
-          },
+          color,
+          tasks: []
         };
         onAdd(listObj);
         onClose();
+      })
+      .catch(() => {
+        alert("Ошибка при добавлении списка");
       })
       .finally(() => {
         setIsLoading(false);
